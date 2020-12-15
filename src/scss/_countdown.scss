@@ -1,0 +1,75 @@
+.countdown{
+    font-family: 'Red Hat Text', sans-serif;
+    background-color: #241e2d;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    max-width: 1440px;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../images/pattern-hills.svg');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+
+    .timer-wrap{
+        width: 100%;
+        justify-content: space-evenly;
+        display: flex;
+        .days,.hours,.minutes,.seconds{
+            position: relative;
+            .time{
+                box-sizing: border-box;
+               
+                height: 150px;
+                width: 148px;
+             
+                z-index: -1;
+                .time-top{
+                    border-radius: 10px;
+                    color: #FB5E84;
+                    height: 50%;
+                    z-index: 1;
+                    background-color: #2C2D44;
+                    border-bottom: 1px black solid;
+                }
+                .half-circle{
+                    background-color: black;
+                    height: 5px;
+                    width: 10px;
+                    border-bottom-left-radius: 10px;
+                    top: 10px;
+                    border-bottom-right-radius: 10px;
+                    position: absolute;
+                    z-index: 1;
+                }
+                .half-circle-left{
+                  @extend .half-circle;
+                    transform: rotate(-90deg);
+                    left: -3px;
+                    top: 73px;
+                    
+                }
+                .half-circle-right{
+                    @extend .half-circle;
+                    transform: rotate(90deg);
+                    
+                    right: -3px;
+                    top: 73px;
+                    
+                }
+                .time-bottom{
+                    @extend .time-top;
+                }
+            }
+            .desc{      
+                margin-top: 10px;
+                color: white;
+            }
+        }
+    }
+}
