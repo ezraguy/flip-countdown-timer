@@ -8,6 +8,7 @@ const CountDown = () => {
                     <div className="time">
                         <div className="half-circle-left"></div>
                         <div className="time-top"></div>
+                        <div className="fake-time-top"></div>
                         <div className="time-bottom"></div>
                         <div className="half-circle-right"></div>
                     </div>
@@ -18,6 +19,7 @@ const CountDown = () => {
                     <div className="time">
                         <div className="half-circle-left"></div>
                         <div className="time-top"></div>
+                        <div className="fake-time-top"></div>
                         <div className="time-bottom"></div>
                         <div className="half-circle-right"></div>
                     </div>
@@ -27,6 +29,7 @@ const CountDown = () => {
                     <div className="time">
                         <div className="half-circle-left"></div>
                         <div className="time-top"></div>
+                        <div className="fake-time-top"></div>
                         <div className="time-bottom"></div>
                         <div className="half-circle-right"></div>
                     </div>
@@ -35,6 +38,7 @@ const CountDown = () => {
                 <div className="seconds ">
                     <div className="time">
                         <div className="half-circle-left"></div>
+                        <div className="fake-time-top"></div>
                         <div className="time-top"></div>
                         <div className="time-bottom"></div>
                         <div className="half-circle-right"></div>

@@ -7,7 +7,6 @@
     margin: 0;
     padding: 0;
     display: flex;
-    max-width: 1440px;
     justify-content: center;
     align-items: center;
     background-image: url('../images/pattern-hills.svg');
@@ -17,6 +16,7 @@
 
 
     .timer-wrap{
+        max-width: 1440px;
         width: 100%;
         justify-content: space-evenly;
         display: flex;
@@ -24,18 +24,28 @@
             position: relative;
             .time{
                 box-sizing: border-box;
-               
                 height: 150px;
                 width: 148px;
-             
-                z-index: -1;
+                perspective: 1000px;
+                position: relative;
                 .time-top{
                     border-radius: 10px;
                     color: #FB5E84;
                     height: 50%;
-                    z-index: 1;
                     background-color: #2C2D44;
                     border-bottom: 1px black solid;
+                    transform-origin: top center;
+                    animation: flip-down 1s ease-in-out infinite;
+                    transform-style: preserve-3d;
+
+                }
+                .fake-time-top{
+                    @extend .time-top;
+                    width: 100%;
+                    animation: none;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
                 }
                 .half-circle{
                     background-color: black;
@@ -51,6 +61,7 @@
                   @extend .half-circle;
                     transform: rotate(-90deg);
                     left: -3px;
+                    background-color: black;
                     top: 73px;
                     
                 }
@@ -64,6 +75,8 @@
                 }
                 .time-bottom{
                     @extend .time-top;
+                    animation: none;
+                    background-color: #343650;
                 }
             }
             .desc{      

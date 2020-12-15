@@ -1,0 +1,15 @@
+@keyframes flip-down{
+    0% {
+        transform: rotateX(0deg);
+        transform-origin: 50% 100%;
+        transform: scale(1.02)
+        
+      }
+    
+      
+      100% {
+        transform: scale(1);
+        transform: rotateX(-180deg);
+        transform-origin: 50% 100%;
+      }
+}
