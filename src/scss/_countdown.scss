@@ -26,7 +26,7 @@
                 box-sizing: border-box;
                 height: 150px;
                 width: 148px;
-                perspective: 1000px;
+                perspective: 350px;
                 position: relative;
                 .time-top{
                     border-radius: 10px;
@@ -34,9 +34,11 @@
                     height: 50%;
                     background-color: #2C2D44;
                     border-bottom: 1px black solid;
-                    transform-origin: top center;
+                    transform-origin: bottom ;
                     animation: flip-down 1s ease-in-out infinite;
+                    animation-fill-mode: forwards;
                     transform-style: preserve-3d;
+                  
 
                 }
                 .fake-time-top{
@@ -68,7 +70,6 @@
                 .half-circle-right{
                     @extend .half-circle;
                     transform: rotate(90deg);
-                    
                     right: -3px;
                     top: 73px;
                     
@@ -77,6 +78,8 @@
                     @extend .time-top;
                     animation: none;
                     background-color: #343650;
+                    transform-style: flat;
+          
                 }
             }
             .desc{      
