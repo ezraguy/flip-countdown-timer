@@ -86,7 +86,7 @@ const CountDown = () => {
 
         <div className="countdown">
 
-            <h2 className="header">We're lunching soon</h2>
+            <h2 className="header">We're launching soon</h2>
             <div className="timer-wrap">
 
                 {countdowns.map(({ id, classNames, wrapperClassName, desc, }, index) => {
