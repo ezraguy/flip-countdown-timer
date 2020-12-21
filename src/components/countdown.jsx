@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { ReactComponent as FacebookIcon } from '../icons/icon-facebook.svg';
+import { ReactComponent as PinterestIcon } from '../icons/icon-pinterest.svg';
+import { ReactComponent as InstagramIcon } from '../icons/icon-instagram.svg';
 const CountDown = () => {
     const [seconds, setSeconds] = useState(59)
     const [minutes, setMinutes] = useState(59)
     const [hours, setHours] = useState(23)
     const [days, setDays] = useState(8)
-
     const [countdowns, setCountdowns] = useState([
         { id: 1, classNames: 'time-left', wrapperClassName: 'time-top', desc: 'Days' },
         { id: 2, classNames: 'time-left', wrapperClassName: 'time-top', desc: 'Hours' },
@@ -79,10 +81,15 @@ const CountDown = () => {
 
     }, [])
     return (
+
+
+
         <div className="countdown">
+
+            <h2 className="header">We're lunching soon</h2>
             <div className="timer-wrap">
 
-                {countdowns.map(({ id, classNames, starterTime, wrapperClassName, desc, }, index) => {
+                {countdowns.map(({ id, classNames, wrapperClassName, desc, }, index) => {
                     return (
                         <div className={desc.toLowerCase()} key={id}>
 
@@ -106,7 +113,13 @@ const CountDown = () => {
 
 
             </div>
-        </div >);
+            <div className="icons">
+                <FacebookIcon className="icon" />
+                <PinterestIcon className="icon" />
+                <InstagramIcon className="icon" />
+            </div>
+        </div>
+    );
 }
 
 export default CountDown;

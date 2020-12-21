@@ -7,14 +7,21 @@
     margin: 0;
     padding: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url('../images/pattern-hills.svg');
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: contain;
+    background: url('../images/bg-stars.svg') top no-repeat, url('../images/pattern-hills.svg') bottom  no-repeat,#241e2d;
+    background-size: contain,contain;
+    overflow-x: hidden;
 
-
+    .header{
+        letter-spacing: 4px;
+        font-weight: 100;
+        text-transform: uppercase;
+        position: absolute;
+        color: white;
+        top: 5rem;
+    }
     .timer-wrap{
         max-width: 1440px;
         width: 100%;
@@ -23,12 +30,12 @@
         .days,.hours,.minutes,.seconds{
             position: relative;
             .time{
-               
                 box-sizing: border-box;
                 height: 150px;
                 width: 148px;
                 perspective: 350px;
                 position: relative;
+
                 .time-top{
                     border-radius: 10px;
                     color: #FB5E84;
@@ -38,9 +45,6 @@
                     transform-origin: bottom ;
                     transform-style: preserve-3d;
                     transform-origin: bottom;
-
-                   
-                    
 
                 }
                 .always{
@@ -115,6 +119,85 @@
                 color: white;
             }
            
+        }
+    }
+
+    .icons{
+        
+        width: 100%;
+        max-width: 140px;
+        margin-top: 100px;
+        justify-content: space-between;
+        display: flex;
+        height: 100px;
+        .icon{
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            fill: #8385A9 ;
+            transition: .3s ease;
+            &:hover{
+                fill: #FB5E84;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:695px){
+ 
+   
+    .countdown{
+        .timer-wrap{
+            max-width: 100%;
+            
+          justify-content: space-around;
+          margin-left: auto;
+          margin-right: auto;
+            .days,.hours,.minutes,.seconds{
+                
+               
+                
+                .time{
+                    max-width: 100px;
+                    max-height: 100px;
+                    .time-left{
+                        top: 15px;
+                        
+                        font-size: 40pt;
+                    }
+
+                    .half-circle{
+                        top: 49px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width:395px){
+    .countdown{
+        .timer-wrap{
+        
+            .days,.hours,.minutes,.seconds{
+                
+               
+                
+                .time{
+                    max-width: 70px;
+                    max-height: 70px;
+                    .time-left{
+                        top: 12px;
+                        font-size: 25pt;
+                    }
+
+                    .half-circle{
+                        top: 38px;
+                    }
+                }
+            }
         }
     }
 }
