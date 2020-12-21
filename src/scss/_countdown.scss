@@ -23,6 +23,7 @@
         .days,.hours,.minutes,.seconds{
             position: relative;
             .time{
+               
                 box-sizing: border-box;
                 height: 150px;
                 width: 148px;
@@ -35,11 +36,21 @@
                     background-color: #2C2D44;
                     border-bottom: 1px black solid;
                     transform-origin: bottom ;
-                    animation: flip-down 1s ease-in-out infinite;
-                    animation-fill-mode: forwards;
                     transform-style: preserve-3d;
-                  
+                    transform-origin: bottom;
 
+                   
+                    
+
+                }
+                .always{
+                    animation-iteration-count: infinite !important;
+                }
+                
+
+                .flip{
+                    animation: flip-down 1s ease-in-out ;
+                    animation-fill-mode: forwards;
                 }
                 .fake-time-top{
                     @extend .time-top;
@@ -48,6 +59,7 @@
                     position: absolute;
                     top: 0;
                     left: 0;
+                    
                 }
                 .half-circle{
                     background-color: black;
@@ -79,13 +91,30 @@
                     animation: none;
                     background-color: #343650;
                     transform-style: flat;
-          
+                }
+
+                .time-left{
+                    position: absolute;
+                    font-size: 55pt;
+                    left: 0;
+                    right: 0;
+                    z-index: 1;
+                    color: #FB5E84;
+                    top: 25px;
+                   
+
+                    
+                }
+                .fold{
+                    animation: fold 1s ease-in-out .2s;
+                     
                 }
             }
             .desc{      
                 margin-top: 10px;
                 color: white;
             }
+           
         }
     }
 }
